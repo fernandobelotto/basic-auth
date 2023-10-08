@@ -9,7 +9,8 @@ function AppForm() {
       <Box p={5} shadow="lg">
         <form onSubmit={async (e)=> {
           e.preventDefault()
-          const formData = new FormData(e.target);
+          // TODO: improve type
+          const formData = new FormData(e.target as any);
 
           try {
             const res = await axios.post('http://localhost:3001/login', Object.fromEntries(formData))
@@ -24,7 +25,7 @@ function AppForm() {
         <VStack>
           <Heading>Authentication</Heading>
           <Input name="email" placeholder="Enter your email" type="email"/>
-          <Input name="password" placeholder="Enter your passoword" type="password"/>
+          <Input name="password" placeholder="Enter your password" type="password"/>
           <Button type="submit">login</Button>
         </VStack>
         </form>

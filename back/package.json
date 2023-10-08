@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "bun index.js"
+    "dev": "bun --watch run index.js"
   },
   "keywords": [],
   "author": "Fernando Gabriel Belotto Bosco <fernando.bbosco@gmail.com> (https://fernandobelotto.com/)",
